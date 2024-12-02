@@ -24,27 +24,51 @@ function textShow() {
     }
 }
 
+function reset() {
+    box1.innerHTML = "";
+    box2.innerHTML = "";
+    box3.innerHTML = "";
+    box4.innerHTML = "";
+    box5.innerHTML = "";
+    box6.innerHTML = "";
+    box7.innerHTML = "";
+    box8.innerHTML = "";
+    box9.innerHTML = "";
+}
+
 function game(number) {
     var text = textShow();
-
-    if (number === 1) {
+    if (number === 1 && box1.innerHTML === "") {
         box1.innerHTML = text;
-    } else if (number === 2) {
+        count++;
+    } else if (number === 2 && box2.innerHTML === "") {
         box2.innerHTML = text;
-    } else if (number === 3) {
+        count++;
+    } else if (number === 3 && box3.innerHTML === "") {
         box3.innerHTML = text;
-    } else if (number === 4) {
+        count++;
+    } else if (number === 4 && box4.innerHTML === "") {
         box4.innerHTML = text;
-    } else if (number === 5) {
+        count++;
+    } else if (number === 5 && box5.innerHTML === "") {
         box5.innerHTML = text;
-    } else if (number === 6) {
+        count++;
+    } else if (number === 6 && box6.innerHTML === "") {
         box6.innerHTML = text;
-    } else if (number === 7) {
+        count++;
+    } else if (number === 7 && box7.innerHTML === "") {
         box7.innerHTML = text;
-    } else if (number === 8) {
+        count++;
+    } else if (number === 8 && box8.innerHTML === "") {
         box8.innerHTML = text;
-    } else if (number === 9) {
+        count++;
+    } else if (number === 9 && box9.innerHTML === "") {
         box9.innerHTML = text;
+        count++;
     }
-    count++;
+
+    if (count === 10) {
+        reset();
+        count = 1;
+    }
 }
